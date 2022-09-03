@@ -14,6 +14,7 @@ def PSNR(original, compressed):
     psnr = 20 * log10(max_pixel / sqrt(mse))
     return psnr
 
+
 def SSIM(original, compressed):
     grayA = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
     grayB = cv2.cvtColor(compressed, cv2.COLOR_BGR2GRAY)
@@ -26,6 +27,8 @@ def SSIM(original, compressed):
 
 
 def main():
+    # foler = open("original")  # image0000.jpeg, image0001.png
+    # folderze2 = open("constructed/")  # image0000.png, image0001.png
     original = cv2.imread("original.jpg")
     compressed = cv2.imread("compressed.png", 1)
 
